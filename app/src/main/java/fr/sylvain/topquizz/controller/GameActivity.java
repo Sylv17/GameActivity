@@ -105,6 +105,7 @@ public class GameActivity extends AppCompatActivity {
 
         mAsk = mQuestionBank.getQuestion();
         this.displayQuestion(mAsk);
+        Toast.makeText(GameActivity.this, "Correct", Toast.LENGTH_SHORT);
     }
 
 
@@ -122,9 +123,9 @@ public class GameActivity extends AppCompatActivity {
         Log.i("SYLVAIN", (responseIndex == mAsk.getAnswerIndex())+ "");
 
         if (responseIndex == mAsk.getAnswerIndex()) {
-            Toast.makeText(this, "Correct", Toast.LENGTH_SHORT);
+            Toast.makeText(GameActivity.this, "Correct", Toast.LENGTH_SHORT);
         } else {
-            Toast.makeText(this, "Wrong answer!", Toast.LENGTH_SHORT);
+            Toast.makeText(GameActivity.this, "Wrong answer!", Toast.LENGTH_SHORT);
         }
     }
 }
